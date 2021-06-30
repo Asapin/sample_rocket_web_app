@@ -1,0 +1,20 @@
+[package]
+name = "rest"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = { version = "0.5.0-rc.1", features = ["json"] }
+thiserror = "1"
+diesel = { version = "1", features = ["postgres"] }
+diesel_migrations = "1"
+dotenv = "0.15"
+serde = { version = "1", features = ["derive"] }
+askama = "0.10"
+
+[dependencies.rocket_sync_db_pools]
+version = "0.1.0-rc.1"
+default-features = false
+features = ["diesel_postgres_pool"]
