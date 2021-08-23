@@ -15,7 +15,7 @@ RUN apt update && apt install -y postgresql-client
 COPY --from=builder /app/target/release/rest /app/rest
 WORKDIR /app
 
-COPY site/static/ ./static/
+COPY site/static/ ./site/static/
 ENV ROCKET_ADDRESS=0.0.0.0
 EXPOSE 8000
 
