@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  web:
+    build:
+      context: ./
+      target: production
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgres://gjgywagq:Tnu9KvKacrBpmwlY1gz4rYOEMX6BCFFx@otto.db.elephantsql.com/gjgywagq
+      - CONNECTION_POOL_SIZE=2
